@@ -209,13 +209,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="elementor-element elementor-element-3f963a0 e-con-full e-flex e-con e-parent e-lazyloaded"
-          data-id="3f963a0" data-element_type="container" id="form_top"
-          data-settings="{&quot;background_background&quot;:&quot;classNameic&quot;}">
-          <div className="elementor-element elementor-element-391c593 e-con-full e-flex e-con e-child" data-id="391c593"
-            data-element_type="container">
             <div className="elementor-element elementor-element-9edda53 elementor-widget elementor-widget-image"
               data-id="9edda53" data-element_type="widget" data-widget_type="image.default">
               <div className="elementor-widget-container">
@@ -223,6 +216,14 @@ export default function Home() {
                   className="attachment-full size-full wp-image-1890" alt="" />
               </div>
             </div>
+          </div>
+        </div>
+        <div className="elementor-element elementor-element-3f963a0 e-con-full e-flex e-con e-parent e-lazyloaded"
+          data-id="3f963a0" data-element_type="container" id="form_top"
+          data-settings="{&quot;background_background&quot;:&quot;classNameic&quot;}">
+          <div className="elementor-element elementor-element-391c593 e-con-full e-flex e-con e-child" data-id="391c593"
+            data-element_type="container">
+            
             <div className="elementor-element elementor-element-2955db1 elementor-widget elementor-widget-heading"
               data-id="2955db1" data-element_type="widget" data-widget_type="heading.default">
               <div className="elementor-widget-container">
@@ -233,7 +234,7 @@ export default function Home() {
             <div className="elementor-element elementor-element-eb504b0 elementor-widget elementor-widget-heading"
               data-id="eb504b0" data-element_type="widget" data-widget_type="heading.default">
               <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">We Handle the Rest htmlFor You!</h2>
+                <h2 className="elementor-heading-title elementor-size-default">We Handle the Rest For You!</h2>
               </div>
             </div>
             <div className="elementor-element elementor-element-6d8454b e-con-full e-flex e-con e-child"
@@ -364,15 +365,17 @@ export default function Home() {
                     </div>
                   </form>
                 </div>
-
-                <div className="elementor-element elementor-element-76e7f3d elementor-widget elementor-widget-heading"
+                </div>
+                
+              </div>
+              <div className="elementor-element elementor-element-76e7f3d elementor-widget elementor-widget-heading"
                   data-id="76e7f3d" data-element_type="widget" data-widget_type="heading.default">
                   <div className="elementor-widget-container">
                     <h2 className="elementor-heading-title elementor-size-default">Lights, Camera, Celebrations! <br />
                       WedEase in Action.</h2>
                   </div>
                 </div>
-                <div className="elementor-element elementor-element-bef14b1 e-flex e-con-boxed e-con e-child" data-id="bef14b1"
+                <div className="elementor-element elementor-element-bef14b1 e-flex e-con-boxed e-con e-child w-full" data-id="bef14b1"
                   data-element_type="container">
                   <div className="e-con-inner">
                     <div className="elementor-element elementor-element-b669d18 e-con-full e-flex e-con e-child"
@@ -420,14 +423,13 @@ export default function Home() {
                           <Image loading="lazy" decoding="async" width="381" height="535"
                             src="/images/prena-img-1.webp"
                             className="attachment-full size-full wp-image-1870" alt=""
-                            srcSet="https://wedease.in/wp-content/uploads/2025/01/prena-img-1.webp 381w, https://wedease.in/wp-content/uploads/2025/01/prena-img-1-214x300.webp 214w"
+                           
                             sizes="(max-width: 381px) 100vw, 381px" />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
               <div className="elementor-element elementor-element-a776009 e-flex e-con-boxed e-con e-parent" data-id="a776009"
                 data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classNameic&quot;}">
                 <div className="e-con-inner">
@@ -465,7 +467,6 @@ export default function Home() {
                           <Image loading="lazy" decoding="async" width="1428" height="39"
                             src="/images/Gradient-1-3.png"
                             className="attachment-full size-full wp-image-1515" alt=""
-                            src="https://wedease.in/wp-content/uploads/2024/12/Gradient-1-3.png 1428w, https://wedease.in/wp-content/uploads/2024/12/Gradient-1-3-300x8.png 300w, https://wedease.in/wp-content/uploads/2024/12/Gradient-1-3-1024x28.png 1024w, https://wedease.in/wp-content/uploads/2024/12/Gradient-1-3-768x21.png 768w"
                             sizes="(max-width: 1428px) 100vw, 1428px" />
                         </div>
                       </div>
@@ -507,7 +508,7 @@ export default function Home() {
                           <Image loading="lazy" decoding="async" width="1428" height="39"
                             src="/images/Gradient-1-3.png"
                             className="attachment-full size-full wp-image-1515" alt=""
-                            srcSet="https://wedease.in/wp-content/uploads/2024/12/Gradient-1-3.png 1428w, https://wedease.in/wp-content/uploads/2024/12/Gradient-1-3-300x8.png 300w, https://wedease.in/wp-content/uploads/2024/12/Gradient-1-3-1024x28.png 1024w, https://wedease.in/wp-content/uploads/2024/12/Gradient-1-3-768x21.png 768w"
+                          
                             sizes="(max-width: 1428px) 100vw, 1428px" />
                         </div>
                       </div>
@@ -559,7 +560,7 @@ export default function Home() {
                                           height="263"
                                           src="/images/wedding-img3-min.webp"
                                           className="attachment-full size-full wp-image-1872" alt=""
-                                          srcSet="https://wedease.in/wp-content/uploads/2025/01/wedding-img3-min.webp 369w, https://wedease.in/wp-content/uploads/2025/01/wedding-img3-min-300x214.webp 300w"
+                                         
                                           sizes="(max-width: 369px) 100vw, 369px" />
                                       </div>
                                     </div>
@@ -604,7 +605,7 @@ export default function Home() {
                                           height="263"
                                           src="/images/wedding-img2-min.webp"
                                           className="attachment-full size-full wp-image-1876" alt=""
-                                          srcSet="https://wedease.in/wp-content/uploads/2025/01/wedding-img2-min.webp 369w, https://wedease.in/wp-content/uploads/2025/01/wedding-img2-min-300x214.webp 300w"
+                                         
                                           sizes="(max-width: 369px) 100vw, 369px" />
                                       </div>
                                     </div>
@@ -648,7 +649,7 @@ export default function Home() {
                                           height="263"
                                           src="/images/wedding-img1-min.webp"
                                           className="attachment-full size-full wp-image-1877" alt=""
-                                          srcSet="https://wedease.in/wp-content/uploads/2025/01/wedding-img1-min.webp 369w, https://wedease.in/wp-content/uploads/2025/01/wedding-img1-min-300x214.webp 300w"
+                                         
                                           sizes="(max-width: 369px) 100vw, 369px" />
                                       </div>
                                     </div>
@@ -755,7 +756,7 @@ export default function Home() {
                                             src="/images/parathana-new.webp"
                                             className="attachment-full size-full wp-image-1843"
                                             alt=""
-                                            src="https://wedease.in/wp-content/uploads/2025/01/parathana-new.webp 614w, https://wedease.in/wp-content/uploads/2025/01/parathana-new-269x300.webp 269w"
+                                           
                                             sizes="(max-width: 614px) 100vw, 614px" /> </a>
                                       </div>
                                     </div>
@@ -863,7 +864,7 @@ export default function Home() {
                                             src="/images/manshi3.webp"
                                             className="attachment-full size-full wp-image-1825"
                                             alt=""
-                                            src="https://wedease.in/wp-content/uploads/2025/01/manshi3.webp 658w, https://wedease.in/wp-content/uploads/2025/01/manshi3-271x300.webp 271w"
+                                           
                                             sizes="(max-width: 658px) 100vw, 658px" /> </a>
                                       </div>
                                     </div>
@@ -970,7 +971,7 @@ export default function Home() {
                                             src="/images/manshi1.webp"
                                             className="attachment-full size-full wp-image-1809"
                                             alt=""
-                                            src="https://wedease.in/wp-content/uploads/2025/01/manshi1.webp 658w, https://wedease.in/wp-content/uploads/2025/01/manshi1-271x300.webp 271w"
+                                          
                                             sizes="(max-width: 658px) 100vw, 658px" /> </a>
                                       </div>
                                     </div>
@@ -1078,7 +1079,7 @@ export default function Home() {
                                             src="/images/parathana-new.webp"
                                             className="attachment-full size-full wp-image-1843"
                                             alt=""
-                                            src="https://wedease.in/wp-content/uploads/2025/01/parathana-new.webp 614w, https://wedease.in/wp-content/uploads/2025/01/parathana-new-269x300.webp 269w"
+                                           
                                             sizes="(max-width: 614px) 100vw, 614px" /> </a>
                                       </div>
                                     </div>
@@ -1187,7 +1188,7 @@ export default function Home() {
                                             src="/images/manshi3.webp"
                                             className="attachment-full size-full wp-image-1825"
                                             alt=""
-                                            src="https://wedease.in/wp-content/uploads/2025/01/manshi3.webp 658w, https://wedease.in/wp-content/uploads/2025/01/manshi3-271x300.webp 271w"
+                                          
                                             sizes="(max-width: 658px) 100vw, 658px" /> </a>
                                       </div>
                                     </div>
@@ -1387,7 +1388,7 @@ export default function Home() {
                                               src="/images/parathana-new.webp"
                                               className="attachment-full size-full wp-image-1843"
                                               alt=""
-                                              src="https://wedease.in/wp-content/uploads/2025/01/parathana-new.webp 614w, https://wedease.in/wp-content/uploads/2025/01/parathana-new-269x300.webp 269w"
+                                             
                                               sizes="(max-width: 614px) 100vw, 614px" /> </a>
                                         </div>
                                       </div>
@@ -1499,7 +1500,7 @@ export default function Home() {
                                               src="/images/manshi3.webp"
                                               className="attachment-full size-full wp-image-1825"
                                               alt=""
-                                              src="https://wedease.in/wp-content/uploads/2025/01/manshi3.webp 658w, https://wedease.in/wp-content/uploads/2025/01/manshi3-271x300.webp 271w"
+                                             
                                               sizes="(max-width: 658px) 100vw, 658px" /> </a>
                                         </div>
                                       </div>
@@ -1612,7 +1613,7 @@ export default function Home() {
                                               src="/images/manshi1.webp"
                                               className="attachment-full size-full wp-image-1809"
                                               alt=""
-                                              src="https://wedease.in/wp-content/uploads/2025/01/manshi1.webp 658w, https://wedease.in/wp-content/uploads/2025/01/manshi1-271x300.webp 271w"
+                                              
                                               sizes="(max-width: 658px) 100vw, 658px" /> </a>
                                         </div>
                                       </div>
@@ -1722,10 +1723,9 @@ export default function Home() {
                                             target="_blank">
                                             <Image loading="lazy" decoding="async" width="614"
                                               height="684"
+                                              alt="parathana"
                                               src="/images/parathana-new.webp"
                                               className="attachment-full size-full wp-image-1843"
-                                              alt=""
-                                              src="https://wedease.in/wp-content/uploads/2025/01/parathana-new.webp 614w, https://wedease.in/wp-content/uploads/2025/01/parathana-new-269x300.webp 269w"
                                               sizes="(max-width: 614px) 100vw, 614px" /> </a>
                                         </div>
                                       </div>
@@ -1838,7 +1838,7 @@ export default function Home() {
                                               src="/images/manshi3.webp"
                                               className="attachment-full size-full wp-image-1825"
                                               alt=""
-                                              src="https://wedease.in/wp-content/uploads/2025/01/manshi3.webp 658w, https://wedease.in/wp-content/uploads/2025/01/manshi3-271x300.webp 271w"
+                                             
                                               sizes="(max-width: 658px) 100vw, 658px" /> </a>
                                         </div>
                                       </div>
@@ -2130,7 +2130,7 @@ export default function Home() {
                   <svg style={{ display: 'none' }} className="e-font-icon-svg-symbols"></svg>
                 </div>
               </div>
-            </div>
+          
           </div>
         </div> 
       </div>
@@ -2205,7 +2205,6 @@ export default function Home() {
                         <a href="https://www.instagram.com/wedease_weddings/" target="_blank">
                           <Image width="552" height="162" src="/images/instagram-logo.png"
                             className="attachment-full size-full wp-image-1576" alt=""
-                            srcSet="https://wedease.in/wp-content/uploads/2024/12/instagram-logo.png 552w, https://wedease.in/wp-content/uploads/2024/12/instagram-logo-300x88.png 300w"
                             sizes="(max-width: 552px) 100vw, 552px" /> </a>
                       </div>
                     </div>

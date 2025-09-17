@@ -370,3 +370,281 @@ img.emoji {
   color: #fff;
   text-decoration: none
 }
+
+/* manuall css */
+
+/* CSS for existing Elementor JSX structure - Add to your global.css */
+
+/* Reset and base styles */
+#content {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Main banner section - Full screen container */
+.banner_section.elementor-element-cbc02a4 {
+  position: relative !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, #f8e8e8 0%, #f0c0c0 100%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Video container - Full background coverage */
+.elementor-element-2e0e98f {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
+}
+
+/* Video widget container */
+.elementor-element-92f36a2 {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Video wrapper and element */
+.e-hosted-video.elementor-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+.elementor-video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+/* Volume toggle controls - Top right */
+#volumeToggle.elementor-element-d5e8bb9 {
+  position: absolute !important;
+  top: 2rem !important;
+  right: 2rem !important;
+  z-index: 10 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+#muteIcon .elementor-button:hover,
+#unmuteIcon .elementor-button:hover {
+  background: #d2666a !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+}
+
+#muteIcon .elementor-button-icon svg,
+#unmuteIcon .elementor-button-icon svg {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* Logo positioning - Top left */
+.logo_custom.elementor-element-0ea49fa {
+  position: absolute !important;
+  top: 2rem !important;
+  left: 2rem !important;
+  z-index: 10 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.logo_custom img {
+  width: 98px !important;
+  height: auto !important;
+  transition: transform 0.3s ease !important;
+}
+
+.logo_custom img:hover {
+  transform: scale(1.05) !important;
+}
+
+/* Main content - Left side positioning */
+.banner_button.elementor-element-f4e2fea {
+  position: absolute !important;
+  left: 2rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+  width: auto !important;
+  max-width: 500px !important;
+  height: auto !important;
+}
+
+
+/* Skip button - Bottom right */
+.banner_skip.elementor-element-eb736cc {
+  position: absolute !important;
+  bottom: 2rem !important;
+  right: 2rem !important;
+  z-index: 10 !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.banner_skip .elementor-button {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid #d2666a !important;
+  /* border-radius: 8px !important; */
+  padding: 0.75rem 4rem !important;
+  color: #d2666a !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.banner_skip .elementor-button:hover {
+  background: #d2666a !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Hide elements properly when display: none */
+[style*="display: none"] {
+  display: none !important;
+}
+
+[style*="display: block"] {
+  display: block !important;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Show mobile content */
+  .elementor-hidden-mobile {
+    display: none !important;
+  }
+  
+  /* Adjust positioning for mobile */
+  .logo_custom.elementor-element-0ea49fa {
+    top: 1.5rem !important;
+    left: 1.5rem !important;
+  }
+  
+  .logo_custom img {
+    width: 70px !important;
+  }
+  
+  /* Mobile content positioning (if you have mobile-specific content) */
+  .banner_button.elementor-element-f4e2fea {
+    left: 1.5rem !important;
+    right: 1.5rem !important;
+    max-width: none !important;
+    top: 45% !important;
+  }
+  
+  .banner_button .elementor-heading-title {
+    font-size: 2.8rem !important;
+  }
+  
+  /* Mobile controls */
+  #volumeToggle.elementor-element-d5e8bb9 {
+    top: 1.5rem !important;
+    right: 1.5rem !important;
+  }
+  
+  #muteIcon .elementor-button,
+  #unmuteIcon .elementor-button {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  #muteIcon .elementor-button-icon svg,
+  #unmuteIcon .elementor-button-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  
+  /* Mobile skip button */
+  .banner_skip.elementor-element-eb736cc {
+    bottom: 1.5rem !important;
+    right: 1.5rem !important;
+  }
+  
+  .banner_skip .elementor-button {
+    padding: 0.6rem 1.2rem !important;
+  }
+  
+ 
+}
+
+@media (max-width: 480px) {
+  /* Very small screens */
+  .logo_custom.elementor-element-0ea49fa {
+    top: 1rem !important;
+    left: 1rem !important;
+  }
+  
+  .logo_custom img {
+    width: 60px !important;
+  }
+  
+  .banner_button.elementor-element-f4e2fea {
+    left: 1rem !important;
+    right: 1rem !important;
+    top: 50% !important;
+  }
+  
+  .banner_button .elementor-heading-title {
+    font-size: 2.2rem !important;
+  }
+  
+  #volumeToggle.elementor-element-d5e8bb9 {
+    top: 1rem !important;
+    right: 1rem !important;
+  }
+  
+  /* Hide button text on very small screens, keep only icons */
+  #muteIcon .elementor-button-text,
+  #unmuteIcon .elementor-button-text {
+    display: none !important;
+  }
+  
+  #muteIcon .elementor-button,
+  #unmuteIcon .elementor-button {
+    padding: 0.5rem !important;
+  }
+  
+  .banner_skip.elementor-element-eb736cc {
+    bottom: 1rem !important;
+    right: 1rem !important;
+  }
+
+}
+
+/* Override any conflicting Elementor styles */
+.elementor-element {
+  box-sizing: border-box !important;
+}
+
+/* Ensure video plays properly */
+.elementor-video {
+  pointer-events: none !important;
+}
+
+/* Fix any z-index issues */
+.elementor-element-cbc02a4 * {
+  position: relative;
+}
+
+.elementor-element-cbc02a4 > .elementor-element {
+  position: absolute;
+}
