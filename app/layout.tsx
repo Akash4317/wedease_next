@@ -60,7 +60,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/e-swiper.min.css" media="all" />
         <link rel="stylesheet" href="/css/popup.min.css" media="all" />
         <link rel="stylesheet" href="/css/widget-video.min.css" media="all" />
-        <link rel="stylesheet" href="/css/widget-form.min.css" media="all" />
+        {/* <link rel="stylesheet" href="/css/widget-form.min.css" media="all" /> */}
         <link rel="stylesheet" href="/css/widget-text-editor.min.css" media="all" />
         <link rel="stylesheet" href="/css/widget-nested-carousel.min.css" media="all" />
         <link rel="stylesheet" href="/css/e-animation-grow.min.css" media="all" />
