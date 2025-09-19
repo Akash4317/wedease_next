@@ -84,6 +84,8 @@ export default function Home() {
     return cleanup;
   }, []);
 
+
+
   return (
     <main id="content">
       <div
@@ -292,8 +294,7 @@ export default function Home() {
                   name='WebToLeads991362000000561091'
                   method='POST'
                   onSubmit={() => {
-                    document.charset = "UTF-8";
-                    return window.checkMandatory991362000000561091();
+                    return (window as any).checkMandatory991362000000561091();
                   }}
                   acceptCharset='UTF-8'
                 >
@@ -334,7 +335,7 @@ export default function Home() {
                         type='text'
                         id='First_Name'
                         name='First Name'
-                        maxLength='40'
+                        maxLength={40}
                         placeholder="Full Name"
                       />
                     </div>
@@ -343,7 +344,7 @@ export default function Home() {
                         type='text'
                         id='Phone'
                         name='Phone'
-                        maxLength='30'
+                        maxLength={30}
                         placeholder="Mobile Number"
                       />
                     </div>
@@ -351,11 +352,10 @@ export default function Home() {
 
                   <div className='zcwf_row'>
                     <input
-                      type='text'
-                      ftype='email'
+                      type='email'
                       id='Email'
                       name='Email'
-                      maxLength='100'
+                      maxLength={100}
                       placeholder="Email address"
                     />
                   </div>
@@ -1936,18 +1936,17 @@ export default function Home() {
                 </div>
 
                 <div id='crmWebToEntityForm' className='zcwf_lblLeft crmWebToEntityForm' >
-                  <form
-                    id='webform991362000000561091'
-                    action='https://crm.zoho.in/crm/WebToLeadForm'
-                    name='WebToLeads991362000000561091'
-                    method='POST'
-                    onSubmit={() => {
-                      document.charset = "UTF-8";
-                      return window.checkMandatory991362000000561091();
-                    }}
-                    acceptCharset='UTF-8'
-                  >
-                    {/* Do not remove this code. */}
+                <form
+                  id='webform991362000000561091'
+                  action='https://crm.zoho.in/crm/WebToLeadForm'
+                  name='WebToLeads991362000000561091'
+                  method='POST'
+                  onSubmit={() => {
+                    return (window as any).checkMandatory991362000000561091();
+                  }}
+                  acceptCharset='UTF-8'
+                >
+                   
                     <input
                       type='text'
                       style={{ display: 'none' }}
@@ -1984,7 +1983,7 @@ export default function Home() {
                           type='text'
                           id='First_Name'
                           name='First Name'
-                          maxLength='40'
+                          maxLength={40}
                           placeholder="Full Name"
                         />
                       </div>
@@ -1993,7 +1992,7 @@ export default function Home() {
                           type='text'
                           id='Phone'
                           name='Phone'
-                          maxLength='30'
+                          maxLength={30}
                           placeholder="Mobile Number"
                         />
                       </div>
@@ -2001,11 +2000,11 @@ export default function Home() {
 
                     <div className='zcwf_row'>
                       <input
-                        type='text'
-                        ftype='email'
+                       
+                        type='email'
                         id='Email'
                         name='Email'
-                        maxLength='100'
+                        maxLength={100}
                         placeholder="Email address"
                       />
                     </div>
