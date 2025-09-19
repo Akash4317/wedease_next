@@ -1606,28 +1606,27 @@ body {
 
 /* Input fields */
 input[type="text"],
-input[ftype="email"] {
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid #d67575;
-  padding: 8px 4px;
-  font-size: 16px;
-  outline: none;
-  color: #333;
-  background: transparent;
+input[type="email"] {
+  width: 100% !important;
+  border: none !important;
+  border-bottom: 1px solid #d67575 !important;
+  padding: 8px 4px !important;
+  font-size: 16px !important;
+  outline: none !important;
+  color: #333 !important;
+  background: transparent !important;
 }
 
 input[type="text"]::placeholder,
-input[ftype="email"]::placeholder {
-  color: #d67575;
-  opacity: 1;
+input[type="email"]::placeholder {
+  color: #d67575 !important;
+  opacity: 1 !important;
 }
 
 /* Submit button */
 .formsubmit {
-  background-color: #d67575;
+  background-color: #D2666A;
   border: none;
-  color: #fff !important;
   padding: 14px 28px;
   font-size: 18px;
   font-weight: 600;
@@ -1638,7 +1637,8 @@ input[ftype="email"]::placeholder {
 }
 
 .formsubmit:hover {
-  opacity: 0.9;
+  background-color: white !important;
+  color: #D2666A !important;
 }
 
 /* Hide Zoho labels and extras */
@@ -1657,4 +1657,12 @@ input[ftype="email"]::placeholder {
   .second-form {
     margin-top: 0 !important;
   }
+}
+
+
+.weddingCss{
+  margin-right: 150px !important;
+}
+.weddingCssButton{
+  margin-right: 25px !important;
 }

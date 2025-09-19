@@ -178,7 +178,7 @@ export default function Home() {
             <div className="elementor-element elementor-element-4c2c7be elementor-widget elementor-widget-heading"
               data-id="4c2c7be" data-element_type="widget" data-widget_type="heading.default">
               <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">Weddings,
+                <h2 className="elementor-heading-title elementor-size-default weddingCss">Weddings,
                 </h2>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function Home() {
             </div>
             <div className="elementor-element elementor-element-8b6aeef elementor-widget elementor-widget-button"
               data-id="8b6aeef" data-element_type="widget" data-widget_type="button.default">
-              <div className="elementor-widget-container">
+              <div className="elementor-widget-container weddingCssButton">
                 <div className="elementor-button-wrapper">
                   <a className="elementor-button elementor-button-link elementor-size-sm"
                     href="https://wedease.in/#form_top">
@@ -352,7 +352,6 @@ export default function Home() {
 
                   <div className='zcwf_row'>
                     <input
-                      
                       type='email'
                       id='Email'
                       name='Email'
@@ -369,7 +368,6 @@ export default function Home() {
                   />
                 </form>
               </div>
-
             </div>
             <div className="elementor-element elementor-element-76e7f3d elementor-widget elementor-widget-heading"
               data-id="76e7f3d" data-element_type="widget" data-widget_type="heading.default">

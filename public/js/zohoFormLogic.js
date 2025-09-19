@@ -3,7 +3,7 @@ export const initializeZohoForm = () => {
     // Validation function for email
     window.validateEmail991362000000561091 = function() {
       var form = document.forms['WebToLeads991362000000561091'];
-      var emailFld = form.querySelectorAll('[ftype=email]');
+      var emailFld = form.querySelectorAll('[type=email]');
       for (var i = 0; i < emailFld.length; i++) {
         var emailVal = emailFld[i].value.trim();
         if (emailVal.length != 0) {
