@@ -352,8 +352,8 @@ export default function Home() {
 
                   <div className='zcwf_row'>
                     <input
-                      type='text'
-                      ftype='email'
+                      
+                      type='email'
                       id='Email'
                       name='Email'
                       maxLength={100}
@@ -2001,8 +2001,7 @@ export default function Home() {
 
                     <div className='zcwf_row'>
                       <input
-                        type = 'text'
-                        ftype='email'
+                        type='email'
                         id='Email'
                         name='Email'
                         maxLength={100}
