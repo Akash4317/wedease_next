@@ -352,7 +352,8 @@ export default function Home() {
 
                   <div className='zcwf_row'>
                     <input
-                      type='email'
+                      type='text'
+                      ftype='email'
                       id='Email'
                       name='Email'
                       maxLength={100}
@@ -1906,7 +1907,7 @@ export default function Home() {
             </div>
             <div className="elementor-element elementor-element-2ce824c e-flex e-con-boxed e-con e-parent" data-id="2ce824c"
               data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classNameic&quot;}">
-              <div className="e-con-inner ">
+              <div className="e-con-inner second-form ">
                 <div className="elementor-element elementor-element-ba1275c e-con-full e-flex e-con e-child"
                   data-id="ba1275c" data-element_type="container">
                   <div className="elementor-element elementor-element-66d8820 elementor-widget elementor-widget-heading"
@@ -2000,8 +2001,8 @@ export default function Home() {
 
                     <div className='zcwf_row'>
                       <input
-                       
-                        type='email'
+                        type = 'text'
+                        ftype='email'
                         id='Email'
                         name='Email'
                         maxLength={100}

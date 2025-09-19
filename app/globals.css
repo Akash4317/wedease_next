@@ -1648,3 +1648,13 @@ input[ftype="email"]::placeholder {
   display: none !important;
 }
 
+
+.second-form {
+  margin-top: 500px !important;
+}
+
+@media (max-width: 768px) {
+  .second-form {
+    margin-top: 0 !important;
+  }
+}
