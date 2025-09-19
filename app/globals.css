@@ -1627,6 +1627,7 @@ input[type="email"]::placeholder {
 .formsubmit {
   background-color: #D2666A;
   border: none;
+  color:#fff !important;
   padding: 14px 28px;
   font-size: 18px;
   font-weight: 600;
