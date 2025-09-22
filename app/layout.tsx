@@ -47,6 +47,10 @@ export default function RootLayout({
       <head>
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
+
+        {/* favicon */}
+
+        <link rel="icon" type="image/svg+xml" href="/images/wedease.svg" />
         
         {/* External CSS Files */}
         <link rel="stylesheet" href="/css/style.min.css" media="all" />
