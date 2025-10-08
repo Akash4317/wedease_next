@@ -1,10 +1,8 @@
 "use client"
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./globals.css";
 import { initializeChatbot } from '../public/js/chatbotLogic';
-import { initializeZohoForm } from '../public/js/zohoFormLogic';
-
 
 export default function Home() {
   useEffect(() => {
@@ -78,12 +76,56 @@ export default function Home() {
     return cleanup;
   }, []);
 
-  useEffect(() => {
-    const cleanup = initializeZohoForm();
+  const [formData, setFormData] = useState({
+    customerName: '',
+    email: '',
+    phone: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-    return cleanup;
-  }, []);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const payload = {
+        Email: formData.email,
+        Customer_Name: formData.customerName,
+        Lead_Source: "Website",
+        Phone_Whatsapp_Number: formData.phone
+      };
+
+      const response = await fetch('http://localhost:8000/zohocrm/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': 'bXlfc3VwZXJfc2VjcmV0X2tleQ=='
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        // Reset form
+        setFormData({
+          customerName: '',
+          email: '',
+          phone: ''
+        });
+      } 
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
 
   return (
@@ -288,64 +330,30 @@ export default function Home() {
             <div className="elementor-element elementor-element-6d8454b e-con-full e-flex e-con e-child"
               data-id="6d8454b" data-element_type="container">
               <div id='crmWebToEntityForm' className='zcwf_lblLeft crmWebToEntityForm'>
-                <form
-                  id='webform991362000000561091'
-                  action='https://crm.zoho.in/crm/WebToLeadForm'
-                  name='WebToLeads991362000000561091'
-                  method='POST'
-                  onSubmit={() => {
-                    return (window as any).checkMandatory991362000000561091();
-                  }}
-                  acceptCharset='UTF-8'
-                >
-                  {/* Do not remove this code. */}
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    name='xnQsjsdp'
-                    value='66eb35dd0d533fc1877f4c25e6b806d0c615ad756c4b787281b8344fb538d675'
-                    readOnly
-                  />
-                  <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    name='xmIwtLD'
-                    value='a7cdb45b1a4fc25a70bac66fbd6b39ddec3256a490ae6ce59d399edd592e025dd03e56c16e6e256efc5bd296c8e46eab'
-                    readOnly
-                  />
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    name='actionType'
-                    value='TGVhZHM='
-                    readOnly
-                  />
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    name='returnURL'
-                    value='https://wedease.in/'
-                    readOnly
-                  />
-
+                <form onSubmit={handleSubmit}>
                   <div className='zcwf_row'>
                     <div className="half-width">
                       <input
                         type='text'
-                        id='First_Name'
-                        name='First Name'
+                        id='customerName'
+                        name='customerName'
                         maxLength={40}
                         placeholder="Full Name"
+                        value={formData.customerName}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                     <div className="half-width">
                       <input
                         type='text'
-                        id='Phone'
-                        name='Phone'
+                        id='phone'
+                        name='phone'
                         maxLength={30}
                         placeholder="Mobile Number"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                   </div>
@@ -353,10 +361,13 @@ export default function Home() {
                   <div className='zcwf_row'>
                     <input
                       type='email'
-                      id='Email'
-                      name='Email'
+                      id='email'
+                      name='email'
                       maxLength={100}
                       placeholder="Email address"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
                     />
                   </div>
 
@@ -364,7 +375,8 @@ export default function Home() {
                     type='submit'
                     id='formsubmit'
                     className='formsubmit zcwf_button'
-                    value='Talk to your WedEaser'
+                    value={isSubmitting ? 'Submitting...' : 'Talk to your WedEaser'}
+                    disabled={isSubmitting}
                   />
                 </form>
               </div>
@@ -1927,98 +1939,64 @@ export default function Home() {
                       data-id="025f1be" data-element_type="widget"
                       data-settings="{&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;button_width&quot;:&quot;100&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}"
                       data-widget_type="form.default">
-
-
                     </div>
                   </div>
-
                 </div>
 
-                <div id='crmWebToEntityForm' className='zcwf_lblLeft crmWebToEntityForm' >
-                <form
-                  id='webform991362000000561091'
-                  action='https://crm.zoho.in/crm/WebToLeadForm'
-                  name='WebToLeads991362000000561091'
-                  method='POST'
-                  onSubmit={() => {
-                    return (window as any).checkMandatory991362000000561091();
-                  }}
-                  acceptCharset='UTF-8'
-                >
-                   
-                    <input
-                      type='text'
-                      style={{ display: 'none' }}
-                      name='xnQsjsdp'
-                      value='66eb35dd0d533fc1877f4c25e6b806d0c615ad756c4b787281b8344fb538d675'
-                      readOnly
-                    />
-                    <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-                    <input
-                      type='text'
-                      style={{ display: 'none' }}
-                      name='xmIwtLD'
-                      value='a7cdb45b1a4fc25a70bac66fbd6b39ddec3256a490ae6ce59d399edd592e025dd03e56c16e6e256efc5bd296c8e46eab'
-                      readOnly
-                    />
-                    <input
-                      type='text'
-                      style={{ display: 'none' }}
-                      name='actionType'
-                      value='TGVhZHM='
-                      readOnly
-                    />
-                    <input
-                      type='text'
-                      style={{ display: 'none' }}
-                      name='returnURL'
-                      value='https://wedease.in/'
-                      readOnly
-                    />
+                <div className="elementor-element elementor-element-6d8454b e-con-full e-flex e-con e-child"
+                  data-id="6d8454b" data-element_type="container">
+                  <div id='crmWebToEntityForm' className='zcwf_lblLeft crmWebToEntityForm'>
+                    <form onSubmit={handleSubmit}>
+                      <div className='zcwf_row'>
+                        <div className="half-width">
+                          <input
+                            type='text'
+                            id='customerName'
+                            name='customerName'
+                            maxLength={40}
+                            placeholder="Full Name"
+                            value={formData.customerName}
+                            onChange={handleInputChange}
+                            required
+                          />
+                        </div>
+                        <div className="half-width">
+                          <input
+                            type='text'
+                            id='phone'
+                            name='phone'
+                            maxLength={30}
+                            placeholder="Mobile Number"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                            required
+                          />
+                        </div>
+                      </div>
 
-                    <div className='zcwf_row'>
-                      <div className="half-width">
+                      <div className='zcwf_row'>
                         <input
-                          type='text'
-                          id='First_Name'
-                          name='First Name'
-                          maxLength={40}
-                          placeholder="Full Name"
+                          type='email'
+                          id='email'
+                          name='email'
+                          maxLength={100}
+                          placeholder="Email address"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
                         />
                       </div>
-                      <div className="half-width">
-                        <input
-                          type='text'
-                          id='Phone'
-                          name='Phone'
-                          maxLength={30}
-                          placeholder="Mobile Number"
-                        />
-                      </div>
-                    </div>
 
-                    <div className='zcwf_row'>
                       <input
-                        type='email'
-                        id='Email'
-                        name='Email'
-                        maxLength={100}
-                        placeholder="Email address"
+                        type='submit'
+                        id='formsubmit'
+                        className='formsubmit zcwf_button'
+                        value={isSubmitting ? 'Submitting...' : 'Talk to your WedEaser'}
+                        disabled={isSubmitting}
                       />
-                    </div>
-
-                    <input
-                      type='submit'
-                      id='formsubmit'
-                      className='formsubmit zcwf_button'
-                      value='Talk to your WedEaser'
-                    />
-                  </form>
+                    </form>
+                  </div>
                 </div>
-
-
-
-
 
                 <script
                   type="speculationrules"
