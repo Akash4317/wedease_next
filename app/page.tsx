@@ -309,35 +309,32 @@ export default function Home() {
           </div>
         </div>
         <section className="w-full flex justify-center py-12 md:py-16 px-4">
-  <div
-    className="max-w-5xl w-full rounded-3xl shadow-lg px-8 md:px-12 py-10 flex flex-col md:flex-row items-center justify-between gap-8"
-    style={{ backgroundColor: "#D39C9C" }}
-  >
-    {/* Left Text Section */}
-    <div className="flex-1 text-center md:text-left">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#EFDCDD" }}>
-        Discover Your <span className="text-white">WoW-Meter</span>
-      </h2>
-      <p className="text-base md:text-lg leading-relaxed" style={{ color: "#F7EAEA" }}>
-        Find out the perfect match for your celebration — let our intelligent system
-        guide you to extraordinary moments.
-      </p>
-    </div>
-
-    {/* Button Section */}
-    <div className="flex-shrink-0">
-      <a
-        href="https://wow-meter.example.com"
-        className="px-8 py-3 md:px-10 md:py-4 font-semibold text-white rounded-full transition-transform transform hover:scale-105 hover:shadow-md"
-        style={{
-          background: "linear-gradient(135deg, #D2666A, #B54C50)",
-        }}
-      >
-        Check WoW-Meter
-      </a>
-    </div>
-  </div>
-</section>
+          <div
+            className="max-w-5xl w-full rounded-3xl shadow-lg px-8 md:px-12 py-10 flex flex-col md:flex-row items-center justify-between gap-8"
+            style={{ backgroundColor: "#D39C9C" }}
+          >
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: "#FFF" }}>
+                Discover Your WoW-Meter
+              </h2>
+              <p className="text-base md:text-lg leading-relaxed" style={{ color: "#FFF" }}>
+                Find out the perfect match for your celebration — let our intelligent system
+                guide you to extraordinary moments.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <a
+                href="https://wow-meter-staging.vercel.app/"
+                className="px-8 py-3 md:px-10 md:py-4 font-semibold !text-white !hover:text-white rounded-full transition-transform transform hover:scale-105 hover:shadow-md"
+                style={{
+                  background: "linear-gradient(135deg, #D2666A, #B54C50)",
+                }}
+              >
+                Check WoW-Meter
+              </a>
+            </div>
+          </div>
+        </section>
 
         <div className="elementor-element elementor-element-3f963a0 e-con-full e-flex e-con e-parent e-lazyloaded"
           data-id="3f963a0" data-element_type="container" id="form_top"
