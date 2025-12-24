@@ -82,6 +82,7 @@ export default function Home() {
     phone: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmittedSuccess, setIsSubmittedSuccess] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -94,16 +95,17 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setIsSubmittedSuccess(false);
 
     try {
       const payload = {
-        Email: formData.email,
-        Customer_Name: formData.customerName,
-        Lead_Source: "Website",
-        Phone_Whatsapp_Number: formData.phone
+        email: formData.email,
+        name: formData.customerName,
+        source: "Website",
+        mobile_number: formData.phone
       };
 
-      const response = await fetch('http://localhost:8000/zohocrm/leads', {
+      const response = await fetch('http://localhost:8080/zohocrm/leads', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -113,6 +115,7 @@ export default function Home() {
       });
 
       if (response.ok) {
+        setIsSubmittedSuccess(true);
         // Reset form
         setFormData({
           customerName: '',
@@ -370,6 +373,7 @@ export default function Home() {
                         value={formData.customerName}
                         onChange={handleInputChange}
                         required
+                        style={{ color: '#D2666A' }}
                       />
                     </div>
                     <div className="half-width">
@@ -382,6 +386,7 @@ export default function Home() {
                         value={formData.phone}
                         onChange={handleInputChange}
                         required
+                        style={{ color: '#D2666A' }}
                       />
                     </div>
                   </div>
@@ -396,6 +401,7 @@ export default function Home() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
+                      style={{ color: '#D2666A' }}
                     />
                   </div>
 
@@ -407,6 +413,29 @@ export default function Home() {
                     disabled={isSubmitting}
                   />
                 </form>
+                {isSubmittedSuccess && (
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginTop: '15px',
+                  }}>
+                    <img
+                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE0IDExIj48cGF0aCBmaWxsPSIjMDA4QTIwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00Ljc1IDguMTUgMS42IDUgLjU1IDYuMDVsNC4yIDQuMiA5LTlMMTIuNy4yeiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+"
+                      alt="check icon"
+                      width="14"
+                      height="11"
+                      style={{ marginRight: '5px' }}
+                    />
+                    <p style={{
+                      color: '#000',
+                      fontSize: '16px',
+                      margin: 0,
+                    }}>
+                      Your submission was successful
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
             <div className="elementor-element elementor-element-76e7f3d elementor-widget elementor-widget-heading"
@@ -1986,6 +2015,7 @@ export default function Home() {
                             value={formData.customerName}
                             onChange={handleInputChange}
                             required
+                            style={{ color: '#D2666A' }}
                           />
                         </div>
                         <div className="half-width">
@@ -1998,6 +2028,7 @@ export default function Home() {
                             value={formData.phone}
                             onChange={handleInputChange}
                             required
+                            style={{ color: '#D2666A' }}
                           />
                         </div>
                       </div>
@@ -2012,6 +2043,7 @@ export default function Home() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
+                          style={{ color: '#D2666A' }}
                         />
                       </div>
 
@@ -2023,6 +2055,29 @@ export default function Home() {
                         disabled={isSubmitting}
                       />
                     </form>
+                    {isSubmittedSuccess && (
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        marginTop: '15px',
+                      }}>
+                        <img
+                          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxMSIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE0IDExIj48cGF0aCBmaWxsPSIjMDA4QTIwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00Ljc1IDguMTUgMS42IDUgLjU1IDYuMDVsNC4yIDQuMiA5LTlMMTIuNy4yeiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+"
+                          alt="check icon"
+                          width="14"
+                          height="11"
+                          style={{ marginRight: '5px' }}
+                        />
+                        <p style={{
+                          color: '#000',
+                          fontSize: '16px',
+                          margin: 0,
+                        }}>
+                          Your submission was successful
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
 

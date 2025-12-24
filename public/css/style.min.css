@@ -257,7 +257,8 @@ textarea {
     border: 1px solid #666;
     border-radius: 3px;
     padding: .5rem 1rem;
-    transition: all .3s
+    transition: all .3s;
+    color: #D2666A !important;
 }
 
 input[type=date]:focus,
